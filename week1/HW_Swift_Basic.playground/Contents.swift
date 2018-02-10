@@ -9,7 +9,7 @@
  -------------
  */
 
-import UIKit
+import Foundation
 
 /*
  Q1: Define a constant of type 'Double'
