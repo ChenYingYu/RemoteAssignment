@@ -128,7 +128,7 @@ index = lottoNumbers.count - 1
 repeat {
     print(lottoNumbers[index])
     index -= 1
-}while index >= 0
+} while index >= 0
 
 index = 0
 repeat {
