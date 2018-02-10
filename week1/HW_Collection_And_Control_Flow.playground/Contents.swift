@@ -34,24 +34,18 @@ myFriends += ["Michael"]
 myFriends = myFriends.filter { $0 != "Kevin"}
 myFriends.insert("Kevin", at: 0)
 
-
 // 5. Print all the elements of an array
 
 // for in loop
-print("\n for-in loop: \n")
-
 for name in myFriends {
     print(name)
 }
 // forEach loop
-print("\n forEach: \n")
-
 myFriends.forEach() { print($0) }
 
 // 6. Range of an array
 
 let personAtIndexFive = myFriends.count > 5 ? myFriends[5] : "Can not find a name at index '5'. The last index of this array is '\(myFriends.count - 1)'."
-print("\n \(personAtIndexFive) \n")
 // use Nil-Coalescing Operator to check if an array index is out of range
 // it turns out that index '5' is out of range because 'myFriends' has only '4' names, which means the index is '3' at most
 
@@ -92,8 +86,6 @@ var values = Array(myCountryNumber.values)
  */
 
 // 1. Print all the elements of arrays or dictionaries
-print("\n for-in loop: \n")
-
 for friend in myFriends {
     print(friend)
 }
@@ -103,8 +95,6 @@ for (country, number) in myCountryNumber {
 }
 
 // 2. Loop over a range
-print("\n for-in loop range: \n")
-
 let lottoNumbers = [10, 9, 8, 7, 6, 5]
 
 for index in (lottoNumbers.count - 3)..<lottoNumbers.count {
@@ -112,8 +102,6 @@ for index in (lottoNumbers.count - 3)..<lottoNumbers.count {
 }
 
 // 3. stride(from: to: by:) stride(from: through: by:)
-print("\n for-in loop stride(): \n")
-
 for index in stride(from: lottoNumbers.count - 1, through: 0, by: -1) {
     print(lottoNumbers[index])
 }
@@ -123,8 +111,6 @@ for index in stride(from: 0, to: lottoNumbers.count, by: 2) {
 }
 
 // 4. while loop
-print("\n while loop: \n")
-
 var index = lottoNumbers.count - 1
 while index >= 0 {
     print(lottoNumbers[index])
@@ -138,8 +124,6 @@ while index < lottoNumbers.count {
 }
 
 // 5. repeat-while loop
-print("\n repeat-while loop: \n")
-
 index = lottoNumbers.count - 1
 repeat {
     print(lottoNumbers[index])
@@ -160,8 +144,6 @@ repeat {
  */
 
 // 1. if statement
-print("\n if statement: \n")
-
 var isRaining = true
 if isRaining {
     print("It's raining, I don't want to work today.")
@@ -177,8 +159,6 @@ if isRaining {
  */
 
 // 1. switch
-print("\n switch: \n")
-
 var jobLevel = 4
 switch jobLevel {
 case 1: print("Member")
