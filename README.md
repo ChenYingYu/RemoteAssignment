@@ -3,6 +3,11 @@
         - Swift Basic
         - Swift Collections and Control Flow
         - Function in Swift
-    -week2 
+    -week2
+        - Objective-Oriented Swift
+        - Enumerations and Optionals in Swift
+        - Protocol in Swift
+        - Error Handling in Swift
+        - Build a Simple iPhone App with Swift (Optional)
     -week3 
     -week4
