@@ -35,7 +35,7 @@ enum Gasoline {
  Q2: Optional
  */
 class Pet {
-    var name: String
+    let name: String
     
     init(name: String) {
         self.name = name
@@ -47,11 +47,10 @@ class People {
 }
 
 // guard let
-let alan = People()
-let pet = Pet(name: "icecream")
-alan.pet = pet
+let person = People()
+person.pet = Pet(name: "icecream")
 func getNameOfPet() -> String? {
-    guard let pet = alan.pet else {
+    guard let pet = person.pet else {
         return "Can not find a pet"
     }
     return pet.name
@@ -59,9 +58,9 @@ func getNameOfPet() -> String? {
 getNameOfPet()
 
 // if let
-let alex = People()
-alex.pet = pet
-if let pet = alex.pet {
+let anotherPerson = People()
+anotherPerson.pet = Pet(name: "Sakamoto")
+if let pet = anotherPerson.pet {
     print(pet.name)
 } else {
     print("Can not find a pet")
