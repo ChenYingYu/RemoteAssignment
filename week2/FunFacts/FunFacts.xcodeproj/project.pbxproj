@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3C487620342E0900DFD050 /* AssignmentTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C487520342E0900DFD050 /* AssignmentTextProvider.swift */; };
 		0AA9C9372031BD0600C28451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9C9362031BD0600C28451 /* AppDelegate.swift */; };
 		0AA9C9392031BD0600C28451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9C9382031BD0600C28451 /* ViewController.swift */; };
 		0AA9C93C2031BD0600C28451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA9C93A2031BD0600C28451 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3C487520342E0900DFD050 /* AssignmentTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTextProvider.swift; sourceTree = "<group>"; };
 		0AA9C9332031BD0600C28451 /* FunFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA9C9362031BD0600C28451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA9C9382031BD0600C28451 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0AA9C93D2031BD0600C28451 /* Assets.xcassets */,
 				0AA9C93F2031BD0600C28451 /* LaunchScreen.storyboard */,
 				0AA9C9422031BD0600C28451 /* Info.plist */,
+				0A3C487520342E0900DFD050 /* AssignmentTextProvider.swift */,
 			);
 			path = FunFacts;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				0AA9C9392031BD0600C28451 /* ViewController.swift in Sources */,
 				0AA9C9372031BD0600C28451 /* AppDelegate.swift in Sources */,
+				0A3C487620342E0900DFD050 /* AssignmentTextProvider.swift in Sources */,
 				0AA9C94B20328A9F00C28451 /* BackgroundColorProvider.swift in Sources */,
 				0AA9C949203270DA00C28451 /* FactProvider.swift in Sources */,
 			);
