@@ -21,7 +21,6 @@ enum Gender {
 }
 
 class Animal {
-    // Not sure let or var
     let gender: Gender
     func eat() {
         print("I eat everything!")
@@ -55,23 +54,23 @@ class Elephant: Animal {
 
 
 /*
- Q3:
+ Q3: Solve the problem
  */
 class Zoo {
-    var weeklyHot: Animal?
-//    init(animal: Animal?) {
-//        self.weeklyHot = animal
-//    }
+    var weeklyHot: Animal
+    
+    init(animal: Animal) {
+        self.weeklyHot = animal
+    }
 }
 
-let zoo = Zoo()
 let tiger = Tiger(gender: Gender.male)
 let elephant = Elephant(gender: Gender.female)
 let horse = Horse(gender: Gender.undefined)
 
+let zoo = Zoo(animal: tiger)
+
 zoo.weeklyHot = tiger
-print(zoo.weeklyHot!)
 zoo.weeklyHot = elephant
-print(zoo.weeklyHot!)
 zoo.weeklyHot = horse
-print(zoo.weeklyHot!)
+
