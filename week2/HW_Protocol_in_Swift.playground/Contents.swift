@@ -21,18 +21,18 @@ protocol ToolMan {
     func fixComputer()
 }
 
-// Q2: Make a struct confirm to a protocol
+// Q2: Make a struct conform to a protocol
 struct Person: PoliceMan {
-    var name: String
+    let name: String
 
     // Q4: Protocol as type
-    var toolMan: ToolMan
+    let toolMan: ToolMan
 
     func arrestCriminals() {}
 }
 
 /*
- Q5: Make a struct confirm to a protocol
+ Q5: Declare a struct conform to another protocol
  */
 struct Engineer: ToolMan {
     func fixComputer() {}
