@@ -1,6 +1,6 @@
 //  HW_Error_Handling_in_Swift
 //
-//  Created by ChenAlan on 2018/2/12.
+//  Created by ChenAlan on 2018/2/14.
 //
 //  Remote Assignment - Week 2
 /*
@@ -9,8 +9,7 @@
  ------------------------
  */
 
-import Foundation
-
+// Sample code that contains an error
 class GuessNumerGame {
     var targetNumber = 10
     
@@ -27,8 +26,16 @@ class GuessNumerGame {
 /*
  Q1: Solve the error
  */
-
+enum GuessNumberGameError: Error {
+    case wrongNumber
+}
 
 /*
  Q2: Call guess(number:) and pass 20 as argument.
  */
+do {
+    try GuessNumerGame().guess(number: 20)
+} catch GuessNumberGameError.wrongNumber {
+    print(GuessNumberGameError.wrongNumber)
+}
+
