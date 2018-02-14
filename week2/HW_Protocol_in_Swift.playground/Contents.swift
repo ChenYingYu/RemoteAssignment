@@ -1,6 +1,6 @@
 //  HW_Protocol_in_Swift
 //
-//  Created by ChenAlan on 2018/2/12.
+//  Created by ChenAlan on 2018/2/14.
 //
 //  Remote Assignment - Week 2
 /*
