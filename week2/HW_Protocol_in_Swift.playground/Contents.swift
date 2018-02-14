@@ -11,17 +11,36 @@
 
 import Foundation
 
+// Q1: Declare a protocol
+protocol PoliceMan {
+    func arrestCriminals()
+}
+
+// Q3: Declare another protocol
+protocol ToolMan {
+    func fixComputer()
+}
+
+// Q2: Make a struct confirm to a protocol
+struct Person: PoliceMan {
+    var name: String
+
+    // Q4: Protocol as type
+    var toolMan: ToolMan
+
+    func arrestCriminals() {}
+}
+
 /*
- Q1:
+ Q5: Make a struct confirm to a protocol
  */
-
+struct Engineer: ToolMan {
+    func fixComputer() {}
+}
 
 /*
- Q2:
+ Q6: Implement protocols
  */
-
-
-/*
- Q3:
- */
+let engineer = Engineer()
+let person = Person(name: "Steven", toolMan: engineer)
 
