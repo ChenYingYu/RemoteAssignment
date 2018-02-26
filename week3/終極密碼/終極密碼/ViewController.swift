@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     
     func checkAnswer() {
         if guessNumber < number.minValue || guessNumber > number.maxValue {
-            print("Unvalid Number: Please input a number between \(number.minValue) and \(number.maxValue)")
+            showInvalidMessage()
             return
         }
         
@@ -66,6 +66,26 @@ class ViewController: UIViewController {
         default:
             fatalError()
         }
+    }
+    
+    func showInvalidMessage() {
+        let alertController = UIAlertController(
+            title: "無效數字",
+            message: "輸入數字須介於 \(number.minValue) 到 \(number.maxValue) 之間",
+            preferredStyle: .alert)
+        
+        let backAction = UIAlertAction(
+            title: "好的",
+            style: .default,
+            handler: {
+                (action: UIAlertAction!) -> Void in
+        })
+        alertController.addAction(backAction)
+        
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil)
     }
     
     func showCompleteMessage() {
