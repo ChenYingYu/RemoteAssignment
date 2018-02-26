@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         inputNumber(sender)
     }
     
+    @IBAction func cancelButton(_ sender: UIButton) {
+        guessNumber = 0
+        updateGuessNumber()
+    }
     func inputNumber(_ button: UIButton) {
         if let titleNumber = button.title(for: UIControlState.normal), let input = Int(titleNumber) {
             guessNumber = guessNumber * 10 + input
