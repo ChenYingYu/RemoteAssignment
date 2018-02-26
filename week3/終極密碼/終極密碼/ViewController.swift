@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var number = Number()
     var guessNumber = Number().guessNumber {
         didSet {
-            updateGuessNumber()
+            updateGuessLabel()
         }
     }
     
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     @IBAction func cancelButton(_ sender: UIButton) {
         guessNumber = 0
-        updateGuessNumber()
+        updateGuessLabel()
     }
     
     @IBAction func submitButton(_ sender: UIButton) {
@@ -61,11 +61,41 @@ class ViewController: UIViewController {
         switch diff {
         case 1...: number.maxValue = guessNumber
         case 0:
-            print("Well Done! You got the secret number!")
+            showCompleteMessage()
         case ..<0: number.minValue = guessNumber
         default:
             fatalError()
         }
+    }
+    
+    func showCompleteMessage() {
+        let alertController = UIAlertController(
+            title: "恭喜！",
+            message: "破解終極密碼：\(number.secretNumber)",
+            preferredStyle: .alert)
+        
+        let newGameAction = UIAlertAction(
+            title: "新遊戲",
+            style: .default,
+            handler: {
+                (action: UIAlertAction!) -> Void in
+                self.newGame()
+        })
+        alertController.addAction(newGameAction)
+        
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil)
+    }
+    
+    func newGame() {
+        number.minValue = 0
+        number.maxValue = 100
+        updateHintLabel()
+        guessNumber = 0
+        newSecretNumber()
+        guessLabel.text = "請輸入數字"
     }
     
     func updateHintLabel() {
@@ -78,7 +108,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateGuessNumber() {
+    func updateGuessLabel() {
         guessLabel.text = "\(guessNumber)"
     }
     
