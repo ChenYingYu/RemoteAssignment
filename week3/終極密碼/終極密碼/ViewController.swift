@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        newSecretNumber()
     }
     
     @IBOutlet weak var hintLabel: UILabel!
@@ -37,6 +38,11 @@ class ViewController: UIViewController {
         guessNumber = 0
         updateGuessNumber()
     }
+    
+    func newSecretNumber() {
+        number.secretNumber = number.randomNumber.nextInt()
+    }
+    
     func inputNumber(_ button: UIButton) {
         if let titleNumber = button.title(for: UIControlState.normal), let input = Int(titleNumber) {
             guessNumber = guessNumber * 10 + input
