@@ -10,24 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    var number = Number()
+    var guessNumber = Number().guessNumber {
+        didSet {
+            updateGuessNumber()
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+    
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var guessLabel: UILabel!
     @IBOutlet var buttons: [UIButton]! {
         didSet {
-            updateViewFromModel()
+            updateButtonStatus()
         }
     }
     
-    func updateViewFromModel() {
+    @IBAction func numberButtons(_ sender: UIButton) {
+        inputNumber(sender)
+    }
+    
+    func inputNumber(_ button: UIButton) {
+        if let titleNumber = button.title(for: UIControlState.normal), let input = Int(titleNumber) {
+            guessNumber = guessNumber * 10 + input
+        }
+    }
+    
+    func updateGuessNumber() {
+        guessLabel.text = "\(guessNumber)"
+    }
+    
+    func updateButtonStatus() {
         for index in buttons.indices {
             let button = buttons[index]
             button.layer.borderWidth = 2.0
