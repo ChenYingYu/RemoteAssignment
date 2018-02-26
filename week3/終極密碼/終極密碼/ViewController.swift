@@ -110,7 +110,7 @@ class ViewController: UIViewController {
     }
     
     func newGame() {
-        number.minValue = 0
+        number.minValue = 1
         number.maxValue = 100
         updateHintLabel()
         guessNumber = 0
