@@ -137,7 +137,7 @@ class ViewController: UIViewController {
             let button = buttons[index]
             button.layer.borderWidth = 2.0
             button.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            button.layer.cornerRadius = button.frame.size.height / 2
+            button.layer.cornerRadius = button.frame.size.width / 2
         }
     }
     
