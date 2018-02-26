@@ -30,13 +30,21 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func holdDown(_ sender: UIButton) {
+        sender.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: UIControlState.normal)
+        sender.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        sender.layer.borderColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    }
+    
     @IBAction func numberButtons(_ sender: UIButton) {
         inputNumber(sender)
+        updateButtonStatus()
     }
     
     @IBAction func cancelButton(_ sender: UIButton) {
         guessNumber = 0
         updateGuessLabel()
+        updateButtonStatus()
     }
     
     @IBAction func submitButton(_ sender: UIButton) {
@@ -44,6 +52,7 @@ class ViewController: UIViewController {
         updateHintLabel()
         guessNumber = 0
         guessLabel.text = "請輸入數字"
+        updateButtonStatus()
     }
     
     func newSecretNumber() {
@@ -135,6 +144,8 @@ class ViewController: UIViewController {
     func updateButtonStatus() {
         for index in buttons.indices {
             let button = buttons[index]
+            button.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: UIControlState.normal)
+            button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             button.layer.borderWidth = 2.0
             button.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             button.layer.cornerRadius = button.frame.size.width / 2
