@@ -9,8 +9,8 @@
 import GameplayKit
 
 class Number {
-    var upperLimit: Int = 100
-    var lowerLimit: Int = 0
+    var maxValue: Int = 100
+    var minValue: Int = 0
     var guessNumber: Int = 0
     var secretNumber: Int = 0
 

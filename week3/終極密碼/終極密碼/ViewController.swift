@@ -39,8 +39,37 @@ class ViewController: UIViewController {
         updateGuessNumber()
     }
     
+    @IBAction func submitButton(_ sender: UIButton) {
+        checkAnswer()
+        updateHintLabel()
+        guessNumber = 0
+        guessLabel.text = "請輸入數字"
+    }
+    
     func newSecretNumber() {
         number.secretNumber = number.randomNumber.nextInt()
+    }
+    
+    func checkAnswer() {
+        if guessNumber < number.minValue || guessNumber > number.maxValue {
+            print("Unvalid Number: Please input a number between \(number.minValue) and \(number.maxValue)")
+            return
+        }
+        
+        let diff = guessNumber - number.secretNumber
+        
+        switch diff {
+        case 1...: number.maxValue = guessNumber
+        case 0:
+            print("Well Done! You got the secret number!")
+        case ..<0: number.minValue = guessNumber
+        default:
+            fatalError()
+        }
+    }
+    
+    func updateHintLabel() {
+        hintLabel.text = "終極密碼 \(number.minValue) ~ \(number.maxValue)"
     }
     
     func inputNumber(_ button: UIButton) {
