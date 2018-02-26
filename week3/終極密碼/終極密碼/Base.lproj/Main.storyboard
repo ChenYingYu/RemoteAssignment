@@ -20,16 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="終極密碼 1 ~ 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-as-FeN">
-                                <rect key="frame" x="75.666666666666686" y="30" width="224" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終極密碼 1 ~ 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-as-FeN">
+                                <rect key="frame" x="75.666666666666686" y="54" width="224" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="請輸入數字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-TZ-ezH">
-                                <rect key="frame" x="106.66666666666667" y="76" width="161.66666666666663" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-Zj-vAX">
@@ -219,19 +213,37 @@
                                     <constraint firstItem="N9o-hl-2p3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xdr-kg-qmc" secondAttribute="bottom" constant="8" id="yro-OR-JNb"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvL-0v-Bvl">
+                                <rect key="frame" x="20" y="107" width="335" height="127.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入數字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-TZ-ezH">
+                                        <rect key="frame" x="86.999999999999986" y="44.333333333333343" width="161.66666666666663" height="38.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Jz2-TZ-ezH" firstAttribute="centerY" secondItem="WvL-0v-Bvl" secondAttribute="centerY" id="21u-fE-WCa"/>
+                                    <constraint firstItem="Jz2-TZ-ezH" firstAttribute="centerX" secondItem="WvL-0v-Bvl" secondAttribute="centerX" id="byO-hM-FXX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cxL-K8-HKF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0gL-dq-K8j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xik-Zj-vAX" secondAttribute="bottom" constant="20" id="2B1-QQ-ZKe"/>
-                            <constraint firstItem="Xik-Zj-vAX" firstAttribute="top" secondItem="Jz2-TZ-ezH" secondAttribute="bottom" constant="20" id="E8e-nl-dXG"/>
-                            <constraint firstItem="Jz2-TZ-ezH" firstAttribute="top" secondItem="9fb-as-FeN" secondAttribute="bottom" constant="10" id="HtN-Pz-ZJn"/>
+                            <constraint firstItem="WvL-0v-Bvl" firstAttribute="top" secondItem="9fb-as-FeN" secondAttribute="bottom" constant="17" id="4EF-7u-alq"/>
                             <constraint firstItem="Xik-Zj-vAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="20" id="JRz-eM-e09"/>
                             <constraint firstItem="Xik-Zj-vAX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNE-e1-8OF"/>
+                            <constraint firstItem="WvL-0v-Bvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NbT-Tb-age"/>
+                            <constraint firstItem="xdr-kg-qmc" firstAttribute="top" secondItem="WvL-0v-Bvl" secondAttribute="bottom" constant="8.3333333333333428" id="WdD-GI-K7G"/>
                             <constraint firstItem="9fb-as-FeN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XxZ-rk-xon"/>
                             <constraint firstItem="9fb-as-FeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Y3y-r7-egt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xik-Zj-vAX" secondAttribute="trailing" priority="750" constant="20" id="bnD-Fg-iGJ"/>
-                            <constraint firstItem="Jz2-TZ-ezH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bqs-Ao-P3X"/>
+                            <constraint firstItem="WvL-0v-Bvl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mtO-fp-lm0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WvL-0v-Bvl" secondAttribute="trailing" constant="20" id="uj1-TL-oUn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

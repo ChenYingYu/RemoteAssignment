@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        newSecretNumber()
+        number.newSecretNumber()
     }
     
     @IBOutlet weak var hintLabel: UILabel!
@@ -53,10 +53,6 @@ class ViewController: UIViewController {
         guessNumber = 0
         guessLabel.text = "請輸入數字"
         updateButtonStatus()
-    }
-    
-    func newSecretNumber() {
-        number.secretNumber = number.randomNumber.nextInt()
     }
     
     func checkAnswer() {
@@ -119,11 +115,8 @@ class ViewController: UIViewController {
     }
     
     func newGame() {
-        number.minValue = 1
-        number.maxValue = 100
+        number.reset()
         updateHintLabel()
-        guessNumber = 0
-        newSecretNumber()
         guessLabel.text = "請輸入數字"
     }
     
