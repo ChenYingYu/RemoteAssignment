@@ -38,14 +38,20 @@ class YouBikeAnnotation: NSObject, MKAnnotation {
 
 struct ClosureClient {
     
-    func getDataFromFile() -> MKAnnotation? {
+    func getDataFromFile() -> [MKAnnotation]? {
         
         let manager = YouBikeManager.createManagerFromFile()
         
         guard manager.stations.count > 0 else { return nil }
         
-        let annotation = YouBikeAnnotation(station: manager.stations[0])
+        var annotations = [MKAnnotation]()
         
-        return annotation
+        for station in manager.stations {
+            let annotation = YouBikeAnnotation(station: station)
+            annotations.append(annotation)
+        }
+        
+        return annotations
+        
     }
 }
