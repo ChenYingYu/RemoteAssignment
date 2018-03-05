@@ -22,13 +22,15 @@ struct DelegateClient {
     
     weak var delegate: DelegateClientProtocol?
     
-    func loadData() {
+    func loadData() -> [YouBikeStation]? {
         
         let manager = YouBikeManager.createManagerFromFile()
         
-        guard manager.stations.count > 0 else { return }
+        guard manager.stations.count > 0 else { return nil }
         
         self.delegate?.didGetDataFromFile(stationInfo: manager.stations[0])
+        
+        return manager.stations
     }
     
 }

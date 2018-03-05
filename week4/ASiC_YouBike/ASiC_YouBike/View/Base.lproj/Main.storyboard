@@ -84,7 +84,7 @@
                     <connections>
                         <outlet property="mapView" destination="7hf-ns-XV4" id="6Bi-OB-7Ia"/>
                         <outlet property="positionLabel" destination="zcb-8R-OKC" id="gsI-mh-pKc"/>
-                        <outlet property="remainNumberLabel" destination="hJr-Wg-pXa" id="GnW-cw-ceg"/>
+                        <outlet property="remainBikesLabel" destination="hJr-Wg-pXa" id="5DO-nr-wK4"/>
                         <outlet property="titleLabel" destination="A5I-ar-qxl" id="3M7-ox-LlS"/>
                     </connections>
                 </viewController>

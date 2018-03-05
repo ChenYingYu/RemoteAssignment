@@ -41,8 +41,16 @@ class YouBikeViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        titleLabel.text = (view.annotation?.title)!
-        positionLabel.text = (view.annotation?.subtitle)!
+        
+        if let stations = delegateClient.loadData() {
+            for station in stations {
+                if station.name == (view.annotation?.title)! {
+                    titleLabel.text       = station.name
+                    positionLabel.text    = station.position
+                    remainBikesLabel.text = "剩 \(station.remainBikes) 台"
+                    break
+                }
+            }
+        }
     }
-    
 }
