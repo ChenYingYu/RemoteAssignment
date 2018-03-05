@@ -29,5 +29,9 @@ class YouBikeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let annotation = closureClient.getDataFromFile() {
+            mapView.showAnnotations([annotation], animated: true)
+            mapView.selectAnnotation(annotation, animated: true)
+        }
     }
 }
