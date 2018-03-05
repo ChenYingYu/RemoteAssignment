@@ -18,7 +18,11 @@ protocol StationInfo {
     var remainBikes: String { get }
 }
 
-class YouBikeViewController: UIViewController {
+class YouBikeViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var remainBikesLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -28,9 +32,17 @@ class YouBikeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        mapView.delegate = self
+        
         if let annotations = closureClient.getDataFromFile() {
             mapView.showAnnotations(annotations, animated: true)
         }
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        titleLabel.text = (view.annotation?.title)!
+        positionLabel.text = (view.annotation?.subtitle)!
+    }
+    
 }

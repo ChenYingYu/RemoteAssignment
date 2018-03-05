@@ -21,9 +21,47 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-wf-naT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="站名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-ar-qxl">
+                                        <rect key="frame" x="48" y="2.5" width="319" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="位置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-8R-OKC">
+                                        <rect key="frame" x="8" y="38" width="359" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_marker" translatesAutoresizingMaskIntoConstraints="NO" id="JBq-wJ-3yN">
+                                        <rect key="frame" x="10" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GBc-va-dHt"/>
+                                            <constraint firstAttribute="width" constant="30" id="uKC-Mq-7f3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩餘" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJr-Wg-pXa">
+                                        <rect key="frame" x="8" y="73.5" width="359" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.93725490196078431" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="JBq-wJ-3yN" firstAttribute="top" secondItem="F7M-wf-naT" secondAttribute="top" id="1os-JL-TLM"/>
+                                    <constraint firstItem="hJr-Wg-pXa" firstAttribute="leading" secondItem="F7M-wf-naT" secondAttribute="leading" constant="8" id="51T-w9-9dZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zcb-8R-OKC" secondAttribute="trailing" constant="8" id="71H-wf-jm0"/>
+                                    <constraint firstItem="A5I-ar-qxl" firstAttribute="bottom" secondItem="JBq-wJ-3yN" secondAttribute="bottom" id="9NG-G4-h1g"/>
+                                    <constraint firstItem="zcb-8R-OKC" firstAttribute="leading" secondItem="F7M-wf-naT" secondAttribute="leading" constant="8" id="9bq-cK-yth"/>
+                                    <constraint firstItem="hJr-Wg-pXa" firstAttribute="top" secondItem="zcb-8R-OKC" secondAttribute="bottom" constant="8" id="Bc5-p7-3PU"/>
+                                    <constraint firstItem="JBq-wJ-3yN" firstAttribute="leading" secondItem="F7M-wf-naT" secondAttribute="leading" constant="10" id="HfJ-NH-0YL"/>
+                                    <constraint firstAttribute="trailing" secondItem="A5I-ar-qxl" secondAttribute="trailing" constant="8" id="KfS-Wl-4wf"/>
+                                    <constraint firstItem="zcb-8R-OKC" firstAttribute="top" secondItem="JBq-wJ-3yN" secondAttribute="bottom" constant="8" id="M8H-0j-dmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="hJr-Wg-pXa" secondAttribute="trailing" constant="8" id="bcf-bK-FAp"/>
                                     <constraint firstAttribute="height" constant="120" id="fEg-Fx-Rwz"/>
+                                    <constraint firstItem="A5I-ar-qxl" firstAttribute="leading" secondItem="JBq-wJ-3yN" secondAttribute="trailing" constant="8" id="i7y-Vd-yWo"/>
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7hf-ns-XV4">
@@ -45,6 +83,9 @@
                     <navigationItem key="navigationItem" title="YouBike" id="n8Z-Nw-5rk"/>
                     <connections>
                         <outlet property="mapView" destination="7hf-ns-XV4" id="6Bi-OB-7Ia"/>
+                        <outlet property="positionLabel" destination="zcb-8R-OKC" id="gsI-mh-pKc"/>
+                        <outlet property="remainNumberLabel" destination="hJr-Wg-pXa" id="GnW-cw-ceg"/>
+                        <outlet property="titleLabel" destination="A5I-ar-qxl" id="3M7-ox-LlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,4 +93,7 @@
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_marker" width="30" height="30"/>
+    </resources>
 </document>
